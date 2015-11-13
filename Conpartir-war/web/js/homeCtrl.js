@@ -4,11 +4,34 @@
  * and open the template in the editor.
  */
 
-  angular.module("myapp", [])
+angular.module("myapp", ['ngRoute'])
+  
+  .config(function($routeProvider){
+  $routeProvider.when("/",
+    {
+      templateUrl: "pages/home.html",
+      controller: "MainController"
+     // controllerAs: "app"
+    });
+    
+    $routeProvider.when("/about",
+    {
+      templateUrl: "pages/about.html",
+      controller: "MainController"
+     // controllerAs: "app"
+    }
+  );
+})
   
   
      .controller("MainController", function($scope) {
+         
       $scope.hello = "Powered by AngularJs";
-   })
+      $scope.hasFooter = true;
+      
+      
+      
+      
+   });
  
    
