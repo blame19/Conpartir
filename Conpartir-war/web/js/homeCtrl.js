@@ -19,18 +19,34 @@ angular.module("myapp", ['ngRoute'])
       templateUrl: "pages/about.html",
       controller: "MainController"
      // controllerAs: "app"
-    }
-  );
+    });
+    $routeProvider.when("/taxis",{
+        templateUrl: "pages/taxis.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
+    $routeProvider.when("/cars",{
+        templateUrl: "pages/cars.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
+    $routeProvider.when("/signup",{
+        templateUrl: "pages/signup.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
+    $routeProvider.when("/login",{
+        templateUrl: "pages/login.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
 })
-  
-  
      .controller("MainController", function($scope) {
          
       $scope.hello = "Powered by AngularJs";
       $scope.hasFooter = true;
-      
-      
-      
+      $scope.cities = ["Bologna", "Firenze", "Genova", "Milano", "Napoli", 
+          "Padova", "Pisa", "Roma", "Siena", "Torino", "Venezia", "Verona"];
    });
  
    

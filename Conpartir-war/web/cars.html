@@ -6,22 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Compartir - Home</title>
-    
-    <!-- Google Maps-->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(45.05, 7.666667),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    
+
     <!-- Bootstrap -->
       
     <link href="frameworks/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -59,11 +44,8 @@
     </nav>
       
    <div class="main-container">
-           <ng-view></ng-view> 
-
+           <ng-view></ng-view>           
     </div> 
-    <div id="map"></div>
-
        
    
       <footer class="footer"> 
@@ -94,7 +76,7 @@
     <!-- Button JS scripts -->
     <script type="text/javascript">
         document.getElementById("loginbutton").onclick = function () {
-            location.href = "http://localhost:8080/Conpartir-war/#/login";
+            location.href = "http://localhost:8080/Conpartir-war/login.html";
         };
     </script>
   </body>
