@@ -40,6 +40,11 @@ angular.module("myapp", ['ngRoute'])
         controller: "MainController"
         // controllerAs: "app"
     });
+    $routeProvider.when("/createpost",{
+        templateUrl: "pages/createpost.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
 })
      .controller("MainController", function($scope) {
          

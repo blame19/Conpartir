@@ -1,3 +1,6 @@
+.body{
+    position: relative;
+}
 .main-container{
   position: absolute;
   text-align: center;
@@ -9,7 +12,8 @@
 .main-container-signin{
     position: absolute;
     text-align: center;
-    left: 30%;
+    top: 50px;
+    left: 33%;
     background-color: #E0E0E0;
     padding: 0.5cm 1cm 1cm 1cm;
 }
@@ -76,12 +80,12 @@
     border-radius: 4px;
 }
 .footer{
-    height: 100px;
+    height: 30px;
     background-color: lightgray;
-    position: absolute;
-  text-align: center;
-  bottom: 0px;
-  width: 100%; 
+    position: fixed;
+    text-align: center;
+    bottom: 0px;
+    width: 100%; 
 }
 .central-panel{
     position: absolute;
@@ -96,7 +100,6 @@
     left: 10px;
     right: 10px;
     background-color: #E0E0E0;
-
 }
 .inline{
     display: inline-block;
@@ -113,5 +116,38 @@
     top: 30%;
     width: 300px;
     height: 200px;
+}
+.inline-cars{
+    display: inline-block;
+    width: 100%;
+}
+.transport-panel{
+    position: absolute;
+    top:50px;
+    width: 100%;
+    height: 200px;
+}
+.transport-panel-photo{
+    float: left;
+    width: 200px;
+    heigth: 200px;
+    margin-left: 0%;
+    display: inline-block;
+}
+.transport-panel-info{
+    width: 33%;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.transport-panel-actions{
+    float: right;
+    width: 33%;
+    margin-top: 30px;
+    display: inline-block;
+}
+.radio-inline-panel{
+    padding: 10px;
 }
 
