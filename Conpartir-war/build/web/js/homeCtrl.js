@@ -45,6 +45,11 @@ var myapp = angular.module("myApp", ['ngRoute', 'postModule']);
         controller: "MainController"
         // controllerAs: "app"
     });
+    $routeProvider.when("/postview",{
+        templateUrl: "pages/postview.html",
+        controller: "MainController"
+        // controllerAs: "app"
+    });
 });
   myapp.controller("MainController", ['$scope', 
       function($scope) {
