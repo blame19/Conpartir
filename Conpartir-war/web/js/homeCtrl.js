@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-angular.module("myapp", ['ngRoute'])
+var myapp = angular.module("myApp", ['ngRoute', 'postModule']);
   
-  .config(function($routeProvider){
+  myapp.config(function($routeProvider){
   $routeProvider.when("/",
     {
       templateUrl: "pages/home.html",
@@ -22,12 +22,12 @@ angular.module("myapp", ['ngRoute'])
     });
     $routeProvider.when("/taxis",{
         templateUrl: "pages/taxis.html",
-        controller: "MainController"
+        controller: "PostController"
         // controllerAs: "app"
     });
     $routeProvider.when("/cars",{
         templateUrl: "pages/cars.html",
-        controller: "MainController"
+        controller: "PostController"
         // controllerAs: "app"
     });
     $routeProvider.when("/signup",{
@@ -45,13 +45,14 @@ angular.module("myapp", ['ngRoute'])
         controller: "MainController"
         // controllerAs: "app"
     });
-})
-     .controller("MainController", function($scope) {
+});
+  myapp.controller("MainController", ['$scope', 
+      function($scope) {
          
       $scope.hello = "Powered by AngularJs";
       $scope.hasFooter = true;
       $scope.cities = ["Bologna", "Firenze", "Genova", "Milano", "Napoli", 
           "Padova", "Pisa", "Roma", "Siena", "Torino", "Venezia", "Verona"];
-   });
+   }]);
  
    
