@@ -156,20 +156,25 @@
 /* CSS for comments block*/
 .comment{
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
+}
+.subcomment{
+    width: 75%;
+    padding-bottom:30px;
+    margin-top: 20px;
+    margin-left: 20%;
 }
 img.user-comment{
     display: inline-block;
     float: left;
     width: 26px;
     height: 23px;
-    
     margin-left: 0px;
 }
 p.existing-comment{
-    float: left;
     display: inline-block;
     width: 66%;
+    word-wrap: break-word;
 }
 textarea.user-comment{
     display: inline-block;
@@ -178,7 +183,11 @@ textarea.user-comment{
     resize: none;
 }
 h2.comments-title{
-    padding: 10px;
+    padding: 10px 10px 40px 10px;
+}
+p.add-reply{
+    color: #2aabd2;
+    text-decoration: underline;
 }
 .radio-inline-panel{
     padding: 10px;
