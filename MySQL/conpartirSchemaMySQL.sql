@@ -3,8 +3,8 @@
 ###############################################################################
 # At first we create a database and we start to use it
 ###############################################################################
-#drop database if exists conpartir;
-#create database if not exists conpartir;
+drop database if exists conpartir;
+create database if not exists conpartir;
 use conpartir;
 ###############################################################################
 # Next we create a table clients with parameters
