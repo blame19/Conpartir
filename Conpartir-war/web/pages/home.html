@@ -1,6 +1,13 @@
+<script src="js/manageList.js"></script>
+<!-- Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<!--<script src="js/GoogleMap.js"></script>-->
-<script src="js/GoogleMap.js">google.maps.event.addDomListener(window, 'load', initialize);</script>
+<script src="js/GoogleMap.js"></script>
+<script>
+    $(function () {
+        $("#calendar").datepicker();
+    });
+</script>
+
 <div class="central-panel">
     <div class="central-panel-position">
         <div class="inline">
@@ -9,45 +16,27 @@
                     <p> Origin: </p>
                 </div>
                 <div class="inline">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true">
-                    From
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    </ul>
+                    <select id="origin" class="selectpicker"></select>
                 </div>
             </div>
         </div>
         <div class="inline">
-            <div class="dropdown">
                 <div class="inline">
                     <p> Destination: </p>
                 </div>
-                <div class="inline">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true">
-                    To
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    </ul>
-                </div>
-            </div>
+                <select id="destination" class="selectpicker" title="To"></select>
+              
         </div>
         <div class="inline">
             <div class="inline">
                 <p>Date: </p>
             </div>
             <div class="inline">
-                <input type="datetime-local"/>
+                <input id="calendar" type="text"/>
             </div>
+        </div>
+        <div class="map-panel">
+            <div id="map"></div>
         </div>
     </div>
 </div>

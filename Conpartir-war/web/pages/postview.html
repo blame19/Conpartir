@@ -1,7 +1,7 @@
 <script src="js/addReply.js"></script>
 <div class="central-panel">
     <hr>
-    <div class="transport-panel" onclick="location.href='#/postview';" style="cursor: pointer;">
+    <div class="transport-panel">
         <div class="inline-cars">
             <div class="transport-panel-photo">
                 <img src="images/user.png" alt="userphoto"/>
@@ -15,8 +15,8 @@
             </div>
             <div class="transport-panel-actions">
                 <table>
-                    <tr><td><button> Start Chatting</button></td></tr>
-                    <tr><td><button> Book now</button></td></tr>
+                    <tr class="spaceUnder"><td><button class="btn btn-success" onclick="location.href='#/chatview';"> Start Chatting</button></td></tr>
+                    <tr class="spaceUnder"><td><button class="btn btn-success"> Book now</button></td></tr>
                 </table>
             </div>
         </div>
@@ -27,6 +27,7 @@
         <div class="comment">
             <img class= "user-comment" src="images/user-comment.png" alt="comment"/>
             <p class= "existing-comment">My first commficfytcighvhgv qwefqwefent adsfasdf asdfasd adsasd asda asd</p>
+            </br>
             <div class="subcomment" style="display: none" id="reply">
                 <img class= "user-comment" src="images/user-comment.png" alt="comment"/>
                 <textarea class= "user-comment"></textarea>            
