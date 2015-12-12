@@ -6,8 +6,21 @@
 (function () {
   'use strict';
 
-  var modPost = angular.module('postModule', []);
-        modPost.controller('PostController', ['$scope', function($scope) {
+  var modPost = angular.module('postModule', ['ngRoute']);
+        modPost.controller('PostController', ['$scope', '$routeParams', '$location',
+        function($scope,$routeParams,$location) {
+      
+      //Change page url, adding a given parameter. 
+      //Look to .config in homeCtrl for info on route params settings. e.g. "/postview/:Id"
+      $scope.go = function (dest,param) {
+          var newDest = dest + '/' + param; 
+          $location.path(newDest);
+      };
+      
+      //Returns Url Param Id from service  $routeParams
+      $scope.getParamId = function () {
+          return $routeParams.Id;
+      };
       
       //Array of JSON objects to show "posts" on the page. TODO: import posts from DB       
       $scope.samplePosts =[ 
@@ -18,7 +31,7 @@
           to: "Milano"          
       },
       { name: "Marco Verdi",
-          car: "Citrone C4 2014",
+          car: "Citroen C4 2014",
           age: 33 ,
           from: "Torino" ,
           to: "Milano"          
