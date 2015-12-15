@@ -49,7 +49,7 @@ var myapp = angular.module("myApp", ['ngRoute', 'postModule']);
         templateUrl: "pages/postview.html",
         controller: "MainController"
         // controllerAs: "app"
-    });
+    });    
 });
   myapp.controller("MainController", ['$scope', 
       function($scope) {

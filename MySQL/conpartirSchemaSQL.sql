@@ -1,5 +1,5 @@
 create table clients(
-client_id INT UNIQUE NOT NULL PRIMARY KEY,
+client_id INT NOT NULL PRIMARY KEY,
 name varchar(15) not null,
 surname varchar(15) not null,
 gender varchar(15) not null,
