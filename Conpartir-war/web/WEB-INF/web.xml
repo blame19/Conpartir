@@ -13,10 +13,4 @@
             30
         </session-timeout>
     </session-config>
-    <ejb-local-ref>
-        <ejb-ref-name>ClientsFacade</ejb-ref-name>
-        <ejb-ref-type>Session</ejb-ref-type>
-        <local>ejb.ClientsFacadeLocal</local>
-        <ejb-link>Conpartir-ejb.jar#ClientsFacade</ejb-link>
-    </ejb-local-ref>
 </web-app>
